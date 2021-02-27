@@ -130,7 +130,7 @@
     padding-right: 2vw;
   }
   .notion-page-icon-wrapper img.notion-page-icon {
-    height: 50%
+    height: 50%;
   }
 }
 
@@ -153,9 +153,7 @@
   margin-right: auto;
 }
 
-/* hide title but reserved it's space */
 .notion-title {
-  opacity: 0;
   display: block;
   text-align: center;
 }
