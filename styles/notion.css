@@ -1,16 +1,11 @@
 /**
  * This file contains site-specifc style overrides for Notion elements from
  * react-notion-x.
- * 
+ *
  * react-notion-x's goal is to match styling as close as possible to Notion,
  * whereas our goal with this site is to adjust Notion's styling in a few key
  * places to add some flare.
  */
-
-.notion {
-  --notion-max-width: 720px;
-  --notion-header-height: 54px;
-}
 
 .notion-page {
   margin: 0 12px;
@@ -20,7 +15,7 @@
 }
 
 .index-page {
-  --notion-max-width: 900px;
+  --notion-max-width: 700px;
 }
 
 .notion-text {
@@ -42,7 +37,8 @@
 }
 
 .notion-gallery-grid {
-  grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
+  grid-template-columns: 100%;
+  grid-auto-rows: min-content;
   grid-gap: 6vmin;
   gap: 6vmin;
 }
@@ -66,32 +62,30 @@
 }
 
 .notion-collection-card {
-  border-radius: 16px;
-  box-shadow: none;
+  border-radius: 8px;
 }
 
 .notion-collection-card-cover img {
-  border-radius: 16px;
-}
-
-.notion-collection-card {
-  overflow: visible;
+  border-radius: 8px;
 }
 
 .notion-collection-card-cover {
-  border-radius: 16px;
+  border-radius: 8px;
+  height: fit-content;
   overflow: visible;
   box-shadow: 2px 2px 8px 4px rgba(15, 15, 15, 0.1);
 }
 
-.notion-collection-card-cover {
-  border-bottom: 0 none;
-  transition: filter 150ms linear;
-  filter: none;
+.notion-collection-card-body {
+  margin-bottom: 0.5em;
+}
+
+.notion-collection-card-cover-empty {
+  display: none;
 }
 
 .notion-collection-card:hover .notion-collection-card-cover {
-  filter: brightness(120%);
+  filter: brightness(95%);
 }
 
 /* only target safari */
@@ -135,6 +129,9 @@
     padding-left: 2vw;
     padding-right: 2vw;
   }
+  .notion-page-icon-wrapper img.notion-page-icon {
+    height: 50%
+  }
 }
 
 @media only screen and (max-width: 600px) {
@@ -156,7 +153,9 @@
   margin-right: auto;
 }
 
+/* hide title but reserved it's space */
 .notion-title {
+  opacity: 0;
   display: block;
   text-align: center;
 }
@@ -184,11 +183,6 @@
   .notion-page-cover {
     border-radius: 0;
   }
-}
-
-.notion-block-ab9a258d6cf444f3bb40dc2600feae91 .notion-page-link {
-  justify-content: center;
-  padding: 2em;
 }
 
 .notion-code {
