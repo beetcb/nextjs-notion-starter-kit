@@ -7,7 +7,8 @@ export function bootstrap() {
    ██║   ██╔══██╗██╔══██║██║╚██╗██║╚════██║██║   ██║   ██║╚██╗ ██╔╝██╔══╝      ██╔══██╗╚════██║
    ██║   ██║  ██║██║  ██║██║ ╚████║███████║██║   ██║   ██║ ╚████╔╝ ███████╗    ██████╔╝███████║
    ╚═╝   ╚═╝  ╚═╝╚═╝  ╚═╝╚═╝  ╚═══╝╚══════╝╚═╝   ╚═╝   ╚═╝  ╚═══╝  ╚══════╝    ╚═════╝ ╚══════╝
-                                                                                               
+
    This site is built using Notion, Next.js, and https://github.com/NotionX/react-notion-x.
+   Forked by beetcb, and shout out to the awesome nextjs-notion-starter-kit
 `)
 }
