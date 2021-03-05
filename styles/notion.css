@@ -175,6 +175,10 @@
   border-radius: 24px;
 }
 
+.notion-page-content .notion-list {
+  max-width: 100%;
+}
+
 @media only screen and (max-width: 1200px) {
   .notion-page-cover {
     border-radius: 0;
