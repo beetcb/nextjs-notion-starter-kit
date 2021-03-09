@@ -15,10 +15,7 @@ export const mapNotionImageUrl = (url: string, block: Block) => {
   }
 
   if (url.startsWith('/images')) {
-    // If image is mine CDN, return the original url
-    if (url.includes('beetcb.com')) {
-      url = url.slice(8)
-    } else url = `https://www.notion.so${url}`
+    url = `https://www.notion.so${url}`
   }
 
   // more recent versions of notion don't proxy unsplash images
@@ -52,6 +49,10 @@ export const mapImageUrl = (imageUrl: string) => {
     // Our proxy uses Cloudflare's global CDN to cache these image assets
     return `${imageCDNHost}/${encodeURIComponent(imageUrl)}`
   } else {
+    // If image is my own CDN, return the original url
+    if (imageUrl.includes('beetcb.com')) {
+      imageUrl = decodeURIComponent(new URL(imageUrl).pathname.slice(7))
+    }
     return imageUrl
   }
 }
