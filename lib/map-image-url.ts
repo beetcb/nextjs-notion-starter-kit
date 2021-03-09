@@ -14,10 +14,11 @@ export const mapNotionImageUrl = (url: string, block: Block) => {
     return url
   }
 
-  // const origUrl = url
-
   if (url.startsWith('/images')) {
-    url = `https://www.notion.so${url}`
+    // If image is mine CDN, return the original url
+    if (url.includes('beetcb.com')) {
+      url = url.slice(8)
+    } else url = `https://www.notion.so${url}`
   }
 
   // more recent versions of notion don't proxy unsplash images
